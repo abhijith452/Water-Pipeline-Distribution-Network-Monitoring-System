@@ -1,0 +1,17 @@
+.navbar{
+   display: flex;
+   flex-direction: column;
+
+
+}
+.navbar h4{
+    margin-bottom: 70px;
+    font-size: 15px;
+    color: snow;
+    list-style: none;
+    text-decoration: none;
+}
+.logo{
+margin-top: 80px;
+margin-bottom: 20px;
+}
