@@ -4,9 +4,10 @@ import React from 'react';
 
 
 import { Chart } from 'react-charts'
-let temArrayT = [];
-let temapArrayH = [];
-let time = [];
+var temArrayT = [];
+var temapArrayH = [];
+var time = [];
+var chart =[];
 function Device(){
     async function Datafetch()
     {
@@ -19,31 +20,42 @@ function Device(){
       headers: myHeaders,
       redirect: 'follow'
     };
-        const url="https://india.table.core.windows.net/newt?sv=2019-02-02&ss=bfqt&srt=sco&sp=rwdlacup&se=2020-03-05T20:26:33Z&st=2020-03-05T12:26:33Z&spr=https&sig=Xkv1fDaNTfCz5iIRvQknXYNYETEsZpJP7XrJuXkwByg%3D";
+        const url="https://india.table.core.windows.net/iotdata?sv=2019-02-02&ss=bfqt&srt=sco&sp=rwdlacup&se=2020-03-09T12:20:40Z&st=2020-03-09T04:20:40Z&spr=https&sig=umQtxbs%2FQJCwCU1Vbg5qByv3zSnt5%2FEVdtR1fH9YvL8%3D";
         let response = await fetch(url,requestOptions);
         let datafet= await response.json();
-       
-      
-datafet.value.forEach(function(dataVal){
+        console.log(datafet);
+datafet.value.forEach(
+  function(dataVal){
+  
 
-temArrayT.push(dataVal['Ph']);
-temapArrayH.push(dataVal['Pressure']);
-time.push(dataVal['RowTime']);
-
+if(dataVal['Pressure'] !== 1 || dataVal['Pressure'] !== 2 || dataVal['Ph'] !== 6 ||dataVal['Ph'] !== 7 )
+{
+  temArrayT.push(dataVal['Pressure']);
+  temapArrayH.push(dataVal['Ph']);
+  time.push(dataVal['RowKey']);
+var chartpoint ={
+  x : dataVal['Pressure'],
+  y : dataVal['Ph']
+}
+chart.push(chartpoint);
+  }
 })
-    };
-    Datafetch();
-    
 
+    };
+  var tArr = chart.toString();
+    Datafetch();
+    console.log(chart);
+    console.log(tArr);
+    console.log(temapArrayH);
+    console.log(temArrayT);
     const data = React.useMemo(
-        () => [
-          {
-            label: temArrayT,
-            data: temapArrayH,
-          },
-          
-        ],
-        []
+        () =>[  {
+          label: 'Series 1',
+          data:  tArr
+        },
+       
+        ]
+        
       )
      
       const axes = React.useMemo(
