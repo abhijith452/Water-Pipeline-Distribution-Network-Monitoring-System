@@ -3,8 +3,7 @@ import {Bar, Line, Pie} from 'react-chartjs-2';
 var iotdata=[] ;
     var  pressure = [];
     var ph = [];
-
-    
+    var time = [];
     async function Fetch()
     {
       var myHeaders = new Headers();
@@ -22,37 +21,41 @@ var iotdata=[] ;
       datafet.value.forEach((dataVal)=>{
         pressure.push(dataVal['Pressure']);
         ph.push(dataVal['Ph']);
-        
+        var timesplit = dataVal['RowKey'].slice(11,19);
+        time.push(timesplit);
       })
     };
-    Fetch();
+   
+Fetch();
+ // setInterval(()=>{Fetch(); },2000)
+    
     console.log(ph)
-class Chart extends Component{
-  
+    console.log(time)
+ class Chart extends Component{
+
+
   constructor(props){
     super(props);
     this.state = {
       chartData:{
         
-        labels: pressure,
+        labels: time,
         datasets:[
           {
-            label:'Population',
+            label:'series',
             data: ph,
             backgroundColor:[
               'rgba(255, 99, 132, 0.6)',
               
             ]
-          }
-        ]
-      ,
-      
-        labels: ph,
-        datasets:[
+          },
           {
-            label:'Population',
+            label:'series',
             data: pressure,
-          
+            backgroundColor:[
+              'green',
+              
+            ]
           }
         ]
       
@@ -79,6 +82,7 @@ class Chart extends Component{
                  <p className="card-title">Location : Palakad</p>
                  <p> Details</p>
                 
+                
 
         </div>
                    
@@ -95,9 +99,11 @@ class Chart extends Component{
             }
           }}
         />
+        
         </div>
     )
   }
 }
+
 
 export default Chart;
