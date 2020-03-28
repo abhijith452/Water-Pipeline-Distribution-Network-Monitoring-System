@@ -1,0 +1,114 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+    
+.loginpage{
+    height:100% ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.login h3{
+    font-weight: 400;
+    color: rgb(20, 115, 240);
+    position: absolute;
+    top:0;
+    margin-top: 55px;
+
+    
+}
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    z-index: 2;
+  
+    
+}
+.login input, .login button{
+    width: 340px;
+    margin-top: 30px;
+}
+.login input{
+    border : none;
+    outline: none;
+}
+.login .tbot{
+    border-bottom: 1px rgb(32, 153, 252) solid;
+}
+.login p{
+    margin-top: 30px;
+    font-size: 12px;
+}
+.login a{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.tbot{
+    margin-top: 5px;
+}
+.login .placeholder{
+    position: absolute;
+    color: rgb(196, 196, 196);
+    margin-top: 32px;
+}
+@media only screen and (max-width: 570px){
+
+
+    .login{
+        height: 70%;
+        width: 70%;
+        
+    }
+
+    .login input, .login button, form{
+        width: 80% !important;
+    }
+    .loginpage{
+        background: none;
+        overflow-x: hidden;
+    }
+
+}
+@media only screen and (max-width: 400px){
+
+
+    .login{
+        height: 60%;
+        width: 70%;
+        
+    }
+
+    .login input, .login button, form,.login .tbot{
+        width: 90% !important;
+    }
+  
+    .login form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+   
+    .login h3{
+        margin-top: 30px;
+        font-size: 18px;
+        
+    }
+    
+
+}

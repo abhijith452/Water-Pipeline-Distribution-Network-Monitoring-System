@@ -1,0 +1,43 @@
+.menu{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    background-color: #25272b;;
+    width: 17%;
+    
+}
+.nav{
+    
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+}
+.nav li {
+    list-style: none;
+    text-decoration: none;
+    margin-top: 50px;
+}
+.nav li a{
+    color: rgb(151, 151, 151);
+}
+.menu p{
+    margin-top: 100%;
+    margin-left: 40px;
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+    
+}
+.menu .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+@media only screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+}

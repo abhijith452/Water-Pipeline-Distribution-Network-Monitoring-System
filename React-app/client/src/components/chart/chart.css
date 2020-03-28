@@ -1,0 +1,101 @@
+
+.chart .col-md-3{
+    display: flex;
+    justify-content: center;
+}
+.chart .card{
+    height: 150px;
+    width: 250px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #aeffc2;
+    border-radius: .25rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    margin: 0;
+    position: relative;
+
+}
+.chart .card h4{
+   font-size:15px;
+   font-weight: 400;
+   margin-left: 30px;
+   margin-top: 30px;
+   color: rgb(134, 134, 134);
+}
+.chart i{
+    margin-left: 30px;
+    margin-top: 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(18, 144, 248)), to(rgb(31, 27, 255)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.chart .row{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #eef2f7;
+    border-radius: .25rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+    display: flex;
+    justify-content: center;
+   
+    
+}
+.chart h1{
+    font-size: 23px;
+    margin-top: 60px;
+    color: rgb(134, 134, 134);
+    margin-bottom: 50px;
+}
+.chart h2{
+    font-size: 25px;
+    margin-top: 60px;
+    color: rgb(110, 110, 110);
+    margin-bottom: 50px;
+}
+.chart .expect{
+    background-color: #f9feff;
+    border: none;
+    
+    box-shadow: none;
+}
+.chart h5{
+    margin-left: 120px;
+    position: absolute;
+    margin-top: 78px;
+    font-size: 40px;
+    color: rgb(110, 110, 110);
+
+
+}
+
+footer{
+    margin-top: 60px;
+    height: 30px;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer h6{
+font-size: 12px;
+color: rgb(173, 173, 173);
+}
+@media only screen and (max-width: 768px){
+.chart .expect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+
+}
+.chart .expect .col-md-3{
+    width: 100%;
+    margin-bottom: 60px;
+}
+.chart .expect .col-md-3 .card{
+    width: 100%;
+}
+}

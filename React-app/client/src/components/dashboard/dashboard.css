@@ -1,0 +1,13 @@
+.rightcontent{
+width: 83%;
+position: relative;
+margin-left: 17%;
+background-color: #f9feff;
+
+}
+@media only screen and (max-width: 768px){
+    .rightcontent{
+        width: 100%;
+        margin: 0;
+    }
+}

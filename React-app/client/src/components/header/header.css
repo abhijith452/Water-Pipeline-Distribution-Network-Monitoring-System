@@ -1,0 +1,24 @@
+.header{
+    background-color: rgb(238, 250, 253);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px rgb(211, 211, 211,.1) solid;
+}
+.header button{
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-right: 20px;
+    
+}
+.header .settings {
+    position: absolute;
+    right: 0px;
+}
+.header i{
+    margin-right: 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(5, 185, 240)), to(rgb(81, 78, 255)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
