@@ -1,5 +1,4 @@
-# Water-Network-Monitoring-System-Reboot-Hackathon-2020
-
+# Water-Pipeline-Distribution-Network-Monitoring-System
 
 This a system capable of monitoring water distribution pipeline network. The parameter been collected are ph, water pressure and flowrate. The value of these parameters are been collected by ph senors,water flow sensors and water pressure sensor which are connected to arduino UNO board. These readings are sent to the NodeMCU esp8266 board and it sent the reading to the Azure Iothub. The reading the recieved by Azure Iothub is fetched by the webapp and been plotted in the graphs available in the web app.
 
@@ -22,7 +21,7 @@ The code given in the repo doesn't contain the actual code required to read valu
 
 #### NodeMCU
 
-* Open nodeMCU code given in the path :
+* Open nodeMCU code given in the path : `Water-Pipeline-Distribution-Network-Monitoring-System/NodeMCU`
 * Input your SSID, PASSWORD and primary connection string of the AzureIotHub to app.ino
 * Upload the code to nodeMCU esp8266
 
@@ -32,7 +31,7 @@ The web app is build on the React.js library. The web app consist of a Node js s
 
 #### Server
 
-* Download the file on the path
+* Download the file on the path `Water-Pipeline-Distribution-Network-Monitoring-System/React-app/server/`
 * Open the folder in your IDE
 * Open `server.js`and input the Iot hub connection string and consumer group as suggested on the link :
 * Open terminal and type `npm install`
@@ -41,9 +40,9 @@ The web app is build on the React.js library. The web app consist of a Node js s
 
 #### Webapp
 
-* Download the file on the path
+* Download the file on the path `Water-Pipeline-Distribution-Network-Monitoring-System/React-app/client/`
 * Open the folder in your IDE
-* Open the `fire.js` and input the api key given by google firebase
+* Open the `fire.js` in the path `Water-Pipeline-Distribution-Network-Monitoring-System/React-app/client/src/config/` and input the api key given by google firebase
 * Open terminal and type `npm install`
 * Once the installation is complete, type in `npm start` in terminal.
 * You should be able to login into the webapp and see the graph been updated in real-time if the arduino is senting the values.
