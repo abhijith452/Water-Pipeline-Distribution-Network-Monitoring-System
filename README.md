@@ -33,7 +33,7 @@ The web app is build on the React.js library. The web app consist of a Node js s
 
 * Download the file on the path `Water-Pipeline-Distribution-Network-Monitoring-System/React-app/server/`
 * Open the folder in your IDE
-* Open `server.js`and input the Iot hub connection string and consumer group as suggested on the link :
+* Open `server.js`and input the Iot hub connection string and consumer group as suggested on the [microsoft documentation](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps)
 * Open terminal and type `npm install`
 * Once the installation is complete, type in `npm start` in terminal.
 * You see the message `server is running` in your browser.
