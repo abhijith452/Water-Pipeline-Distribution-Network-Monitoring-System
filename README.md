@@ -47,9 +47,8 @@ The web app is build on the React.js library. The web app consist of a Node js s
 * Once the installation is complete, type in `npm start` in terminal.
 * You should be able to login into the webapp and see the graph been updated in real-time if the arduino is senting the values.
 
-![2020-07-02-20-58-46(1)](https://user-images.githubusercontent.com/48409905/87226291-6e469000-c3b0-11ea-9809-7fc43dcb4d51.gif)
-
-![2020-07-02-20-58-46](https://user-images.githubusercontent.com/48409905/87225739-b95ea400-c3ac-11ea-8cdd-20a539a3faaf.gif)
+![arduino](https://user-images.githubusercontent.com/48409905/87226344-b5348580-c3b0-11ea-9d97-e4b20b843c97.gif)
+![2020-07-02-20-58-46(1)](https://user-images.githubusercontent.com/48409905/87226357-c9788280-c3b0-11ea-87ef-71bfb5505962.gif)
 
 For more details please refer the README.md files in each folder
 
